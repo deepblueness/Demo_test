@@ -4,8 +4,14 @@ require_relative 'spec_helper'
 
 describe 'A job posting', type: :feature, js: true do
   let(:page) { SitePrism::Page::JobPage.new }
+  let(:home_page) { SitePrism::Page::LandingPage.new }
   let(:job_uuid) { '65e7cf41-2b3b-48b4-a39e-0c4c04f29c1d' }
-
+  
+  it 'navigates from landing to overview' do
+    # TODO: move this to a before statemenet when it's complete
+    home_page.load
+    job_overview = home_page.navigate_to_jobs_overview
+  end
   it 'displays the job title' do
     page.load(job_uuid: job_uuid)
     page.wait_for_job_title
