@@ -6,4 +6,5 @@ group :test do
   gem 'poltergeist'
   gem 'site_prism'
   gem 'selenium-webdriver'
+  gem 'byebug', require: false
 end
