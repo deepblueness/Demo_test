@@ -6,8 +6,9 @@ The project consiste of 7 tests that check the presence and the content of a spe
 
 1. Clone the repo
 2. Bundle install in the project directory
-3. Run the tests by executing: bundle exec rspec job_page_spec.rb
-4. Enjoy yourself watching it run, getting greener by the second :)
+3. You might need to install the chrome driver: brew install chromedriver
+4. Run the tests by executing: bundle exec rspec job_page_spec.rb
+5. Enjoy yourself watching it run, getting greener by the second :)
 
 # What's inside
 
