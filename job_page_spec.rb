@@ -35,5 +35,6 @@ describe 'A job posting', type: :feature, js: true do
     page.load(job_uuid: job_uuid)
     page.wait_for_apply_button
     expect(page).to have_apply_button
+    # TODO: nav to apply page missing
   end
 end
