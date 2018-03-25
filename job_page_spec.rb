@@ -21,4 +21,14 @@ describe 'A job posting', type: :feature, js: true do
     expect(page.job_description).to be_visible
     expect(page.job_description).to have_content('Are you passionate about building QA team')
   end
+  it 'displays the your responsibilities section' do
+    page.load
+    expect(page.your_responsibilities).to be_visible
+    expect(page.your_responsibilities_element.count).to eq(8)
+  end
+  it 'displays the your profile section' do
+    page.load
+    expect(page.your_profile).to be_visible
+    expect(page.your_profile_element.count).to eq(7)
+  end
 end
