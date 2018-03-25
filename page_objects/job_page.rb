@@ -11,4 +11,6 @@ class JobPage < SitePrism::Page
 
   element :your_profile, 'section:nth-of-type(2) '
   elements :your_profile_element, 'section:nth-of-type(2) li'
+
+  element :apply_button, '.corporate-call-to-action a.btn-primary'
 end

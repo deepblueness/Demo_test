@@ -31,4 +31,9 @@ describe 'A job posting', type: :feature, js: true do
     expect(page.your_profile).to be_visible
     expect(page.your_profile_element.count).to eq(7)
   end
+  it 'displays the apply button' do
+    page.load
+    page.wait_for_apply_button
+    expect(page).to have_apply_button
+  end
 end
