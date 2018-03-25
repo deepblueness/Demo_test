@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative './page_objects/job_page.rb'
+require_relative 'spec_helper'
 
 describe 'A job posting', type: :feature, js: true do
   let(:page) { SitePrism::Page::JobPage.new }
@@ -35,6 +35,7 @@ describe 'A job posting', type: :feature, js: true do
     page.load(job_uuid: job_uuid)
     page.wait_for_apply_button
     expect(page).to have_apply_button
-    # TODO: nav to apply page missing
+    apply_page = page.navigate_to_apply_page
+    expect(apply_page).to have_submit_title
   end
 end

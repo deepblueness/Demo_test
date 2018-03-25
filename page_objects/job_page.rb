@@ -14,4 +14,9 @@ class JobPage < SitePrism::Page
   elements :your_profile_element, 'section:nth-of-type(2) li'
 
   element :apply_button, '.corporate-call-to-action a.btn-primary'
+
+  def navigate_to_apply_page
+    apply_button.click
+    ApplyPage.new
+  end
 end
