@@ -34,7 +34,7 @@ describe 'A job posting', type: :feature, js: true do
   it 'displays the apply button' do
     page.load(job_uuid: job_uuid)
     page.wait_for_apply_button
-    expect(page).to have_apply_button
+    expect(page).to have_apply_button 
     apply_page = page.navigate_to_apply_page
     expect(apply_page).to have_submit_title
   end
